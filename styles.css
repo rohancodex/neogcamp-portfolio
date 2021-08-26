@@ -113,7 +113,7 @@ p {
 .logo {
     margin-left: 3rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 nav {
@@ -165,9 +165,34 @@ a {
 
 footer {
     margin-top: 10rem;
-    /* display: flex;
-    flex-flow: row; */
-    /* justify-content: center; */
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: var(--primary);
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 i {
